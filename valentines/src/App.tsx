@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import backgroundImage from '/src/assets/background.jpeg'; 
-import '/src/assets/like.jpeg';
+import hoverGif from '/src/assets/hovergif.gif';
+import slingshot from '/src/assets/slingshot.gif';
 import {Spotify} from 'react-spotify-embed';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
         </div>
        
         <div className='flex justify-center pb-10'>
-          <img src="./src/assets/slingshot.gif" alt="slingshot" />
+          <img src = {slingshot} alt="slingshot" />
         </div>
        
         <div className='flex justify-center gap-2'>
@@ -55,7 +56,7 @@ function App() {
 
         {showHoverGif && ( // Conditionally render the hovering GIF
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
-            <img src='/src/assets/hovergif.gif' /> {/* Render the hovering GIF */}
+            <img src={hoverGif} /> {/* Render the hovering GIF */}
           </div>
         )}
       </div>
